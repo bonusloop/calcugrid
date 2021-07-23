@@ -38,14 +38,13 @@ body {
     box-shadow: 4px 4px 40px 5px rgba(17, 22, 44, 0.20);
     overflow: hidden;
     background-color: #738396;
-    display: grid;
-    grid-template-rows: 50px 145px repeat(5, 1fr);
-    grid-template-columns: repeat(4, 1fr) repeat(3, 80px);
+    display: flex;
+    flex-direction: column;
 }
 
 .calc__header {
     background-color: #374352;
-    grid-area: 1/1/2/8;
+    height: 50px;
     display: flex;
     justify-content: flex-end;
 }
@@ -61,7 +60,7 @@ body {
 .calc__display {
     background-color: #515c69;
     font-size: 43px;
-    grid-area: 2/1/2/8;
+    height: 145px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -71,6 +70,11 @@ body {
 
 .calc__buttons {
     background-color: #738396;
+    display: grid;
+    grid-template-rows:  repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr) repeat(3, 80px);
+    gap: 1px;
+    flex-grow: 1;
 }
 
 .calc__btn-number {
@@ -105,7 +109,7 @@ body {
 }
 .calc__btn-equal-sign {
     background: linear-gradient(-30deg, #fe2c75, #fca82c);
-    grid-area: 7/3/7/5;
+    grid-area: 5/3/5/5;
 }
 
 .calc__btn-operation--red-text {
